@@ -1,5 +1,231 @@
+/* Global rules */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: norse;
+  src: url("./assets/Norse-Bold.otf");
+}
+
+body {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Custom rules */
+aside {
+  position: relative;
+  height: 100vh;
+  width: 35vw;
+  background: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 220px;
+  padding: 16px;
+  background-color: #fff7;
+}
+
+aside div h1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: norse, sans-serif;
+  font-size: 7rem;
+  color: #fff;
+}
+
+aside div h1 img {
+  height: 150px;
+}
+
+aside span {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  color: #0007;
+}
+
+aside span a {
+  color: #0007;
+  text-decoration: underline;
+  transition: color 0.16s;
+  -webkit-transition: color 0.16s;
+  -moz-transition: color 0.16s;
+  -ms-transition: color 0.16s;
+  -o-transition: color 0.16s;
+}
+
+aside span a:hover {
+  color: #000d;
+}
+
+main {
+  height: 100vh;
+  width: 65vw;
+  background-color: #f8f8f8;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 42vh;
+  padding: 64px 48px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+main > div p {
+  max-inline-size: 53ch;
+}
+
+main > div p:last-of-type {
+  margin-top: 24px;
+}
+
+main form > div:first-of-type {
+  padding: 24px 48px;
+  background-color: #fff;
+  box-shadow: 0 5px 16px #0001;
+}
+
+main form > div h2 {
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+main form > div .input-couple {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 16px;
+}
+
+main form > div .input-couple .input {
+  display: flex;
+  flex-direction: column;
+}
+
+main form > div .input-couple .input label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main form > div .input-couple .input input {
+  width: 22rem;
+  padding: 8px;
+  border: 1px solid #0002;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: 0.16s;
+  -webkit-transition: 0.16s;
+  -moz-transition: 0.16s;
+  -ms-transition: 0.16s;
+  -o-transition: 0.16s;
+}
+
+main form > div .input-couple .input input:user-valid {
+  outline: none;
+  border-color: #00c71b;
+}
+
+main form > div .input-couple .input input:user-invalid {
+  outline: none;
+  border-color: #d60000;
+}
+
+main form > div .input-couple .input input:focus {
+  outline: none;
+  border-color: #0059ff;
+  box-shadow: 0 5px 16px #0001;
+}
+
+/* Remove number input arrows */
+/* Chrome, Safari, Edge, Opera */
+main form > div .input-couple .input input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+main form > div .input-couple .input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+main form > div:last-of-type {
+  padding: 24px 48px;
+}
+
+main form > div:last-of-type button {
+  margin-bottom: 32px;
+  padding: 16px 48px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  animation: bg-color-animation 16s infinite alternate;
+  -webkit-animation: bg-color-animation 16s infinite alternate;
+  cursor: pointer;
+}
+
+main form > div:last-of-type p {
+  font-size: 1.25rem;
+}
+
+main form > div:last-of-type a {
+  font-weight: 600;
+  animation: color-animation 20s infinite alternate;
+  -webkit-animation: color-animation 20s infinite alternate;
+}
+
+@keyframes color-animation {
+  0% {
+    color: #d737ff;
+  }
+  50% {
+    color: #4b37ff;
+  }
+  100% {
+    color: #ff3737;
+  }
+}
+
+@keyframes bg-color-animation {
+  0% {
+    background-color: #d737ff;
+  }
+  50% {
+    background-color: #4b37ff;
+  }
+  100% {
+    background-color: #ff3737;
+  }
 }

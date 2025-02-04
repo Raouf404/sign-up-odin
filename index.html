@@ -4,7 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Sign-up form</title>
+    <script src="./script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <aside>
+      <div>
+        <h1 class="logo"><img src="./assets/logo.png" alt="Odin" />ODIN</h1>
+      </div>
+      <span>
+        Photo by
+        <a
+          href="https://unsplash.com/@mymind?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >mymind</a
+        >
+        on
+        <a
+          href="https://unsplash.com/photos/purple-white-and-orange-light-tZCrFpSNiIQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >Unsplash</a
+        >
+      </span>
+    </aside>
+    <main>
+      <div>
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+        </p>
+        <p>Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form action="./">
+        <div>
+          <h2>Let's do this!</h2>
+          <div>
+            <div class="input-couple">
+              <div class="input">
+                <label for="first_name">First name</label>
+                <input type="text" id="first_name" required />
+              </div>
+              <div class="input">
+                <label for="last_name">Last name</label>
+                <input type="text" id="last_name" required />
+              </div>
+            </div>
+            <div class="input-couple">
+              <div class="input">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="input">
+                <label for="phone_number">Phone number</label>
+                <input type="number" id="phone_number" required />
+              </div>
+            </div>
+            <div class="input-couple">
+              <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+              </div>
+              <div class="input">
+                <label for="confirm_password">Confirm password</label>
+                <input type="password" id="confirm_password" required />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button>Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
